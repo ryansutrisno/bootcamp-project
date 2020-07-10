@@ -8,6 +8,7 @@ import HomePage from './components/HomePage';
 import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
 import IndecisionPage from './components/IndecisionPage';
+import CelciusToFarnheit from './components/CelciusToFarnheit';
 import Footer from './components/Footer';
 import NotFoundPage from './components/NotFoundPage';
 
@@ -22,6 +23,11 @@ const AppRouter = () => (
         <Route
           path="/aplikasi-keputusan"
           component={IndecisionPage}
+          exact={true}
+        />
+        <Route
+          path="/conversi-suhu"
+          component={CelciusToFarnheit}
           exact={true}
         />
         <Route component={NotFoundPage} />

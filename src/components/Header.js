@@ -31,6 +31,12 @@ const Header = () => (
         activeClassName="is-active">
         Aplikasi Keputusan
       </NavLink>
+      <NavLink
+        style={{ margin: 10, color: '#61dafb' }}
+        to="/conversi-suhu"
+        activeClassName="is-active">
+        Conversi Suhu
+      </NavLink>
     </div>
   </header>
 );
