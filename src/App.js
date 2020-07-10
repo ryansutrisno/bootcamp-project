@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+// Components
+import Header from './components/Header';
+import HomePage from './components/HomePage';
+import ContactPage from './components/ContactPage';
+import AboutPage from './components/AboutPage';
+import IndecisionPage from './components/IndecisionPage';
+import Footer from './components/Footer';
+import NotFoundPage from './components/NotFoundPage';
+
+const AppRouter = () => (
+  <BrowserRouter>
+    <Header />
+    <div className="App-header">
+      <Switch>
+        <Route path="/" component={HomePage} exact={true} />
+        <Route path="/about" component={AboutPage} exact={true} />
+        <Route path="/contact" component={ContactPage} exact={true} />
+        <Route
+          path="/aplikasi-keputusan"
+          component={IndecisionPage}
+          exact={true}
+        />
+        <Route component={NotFoundPage} />
+      </Switch>
     </div>
-  );
-}
+    <Footer />
+  </BrowserRouter>
+);
 
-export default App;
+export default AppRouter;
