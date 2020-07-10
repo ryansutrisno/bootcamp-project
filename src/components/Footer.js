@@ -1,5 +1,9 @@
 import React from 'react';
 
 export default function Footer() {
-  return <div>Ini Footer</div>;
+  return (
+    <div className="App-footer">
+      <p>Copyright &copy; 2020. All right reserved</p>
+    </div>
+  );
 }
