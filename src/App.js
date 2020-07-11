@@ -9,6 +9,7 @@ import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
 import IndecisionPage from './components/IndecisionPage';
 import CelciusToFarnheit from './components/CelciusToFarnheit';
+import Counter from './components/Counter';
 import Footer from './components/Footer';
 import NotFoundPage from './components/NotFoundPage';
 
@@ -30,6 +31,7 @@ const AppRouter = () => (
           component={CelciusToFarnheit}
           exact={true}
         />
+        <Route path="/penghitung" component={Counter} exact={true} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
